@@ -56,8 +56,16 @@
     margin: 5px;
 }
 
-#posts{
-    margin-left:5px;
+#post{
+    margin-left:13px;
+}
+
+#followers{
+    margin-left:7px;
+}
+
+#following{
+    margin-left: -20px;
 }
 
 #follow-btn{
