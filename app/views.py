@@ -7,11 +7,16 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
-
+import datetime
 
 ###
 # Routing for your application.
 ###
+
+def format_date_joined(date):
+    
+    date_joined = datetime.date(2016, 2, 7)
+    return date_joined.strftime("%B, %Y")
 
 @app.route('/')
 def home():
@@ -22,8 +27,21 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Kyle Burke")
 
+@app.route('/profile/')
+def profile():
+    params = {}
+    #name = "Kyle Burke", tag = "@kburke629", addr = "Kingston, Jamaica", joined = format_date_joined("02/14/2016")
+    params['name'] = "Kyle Burke"
+    params['tag'] = "@kburke629"
+    params['addr'] = "Kingston, Jamaica"
+    params['joined'] = format_date_joined("02/14/2016")
+    params['num_posts'] = 700
+    params['num_following'] = 425
+    params['num_followers'] = 600
+    params['bio'] = "My name is Kyle Burke, I like to code and play instruments. I have no clue what to write lol cowboy emoji. Lorem ipsum dolor sit amet I am trying to fill out space so the paragraph looks bigger lorem ipsum haha"
+    return render_template('profile.html', params = params)
 
 ###
 # The functions below should be applicable to all Flask apps.

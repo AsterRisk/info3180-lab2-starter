@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Page: {{ name }}</title>
+        <link rel = "stylesheet" href = '{{url_for('static', filename = 'css/profile.css')}}'/>
+        {% extends 'base.html' %}
+    </head>
+    <body>
+
+        {% block main %}
+        <div id= "profile">
+            <div id = "profile-bkgnd">
+                <div id = "profile-info">
+                    <img src = '{{url_for('static', filename = "images/profile_pic.jpeg")}}' class = "profile-pic"/>
+                    <h1>{{ params['name'] }}</h1>
+                    <span class = "personal-info"> {{ params['tag'] }} </span>
+                    <br>
+                    <span class = "personal-info"> {{ params['addr'] }} </span>
+                    <br>
+                    <span class = "personal-info"> {{ params['joined'] }} </span>
+                    <br>
+                </div>
+            </div>
+            
+            <div >
+                <p id = "bio"> {{ params['bio'] }} </p>
+            </div>
+            <div id = "posts-info">
+                <b>
+                <span class = "posts-numbers"> {{ params['num_posts'] }} </span>
+                <span class = "posts-numbers"> {{ params['num_followers'] }} </span>
+                <span class = "posts-numbers"> {{ params['num_following'] }}</span>
+                </b>
+                <br>
+                <span class = "posts-labels" id = "post"> Posts </span>
+                <span class = "posts-labels" id = "followers"> Followers </span>
+                <span class = "posts-labels" id = "following">  Following </span>
+            </div>
+            <br>
+            <div>
+                <button id="follow-btn"><b>Follow</b></button>
+            </div>
+            <br>
+            <br>
+        </div>
+        {% endblock %}
+    </body>
+</html>

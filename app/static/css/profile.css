@@ -1,0 +1,71 @@
+.profile-pic{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    
+}
+
+#profile-bkgnd{
+    
+    border: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius:15px 15px 0px 0px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    z-index: -1;
+    background-origin: border-box;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    padding: 10px;
+}
+
+#profile-info{
+    
+    background-clip: border-box;
+    text-align: center;
+    color: white;
+    
+}
+
+#profile{
+    margin-left:250px;
+    border:solid;
+    width: 50%;
+    align-items: center;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius:15px;
+}
+
+.posts-numbers{
+    width: 100%;
+    padding: 75px;
+}
+
+#bio{
+    margin-left:40px;
+    margin-right: 40px;
+}
+
+.posts-labels{
+    width: 100%;
+    padding: 60px;
+}
+
+.personal-info{
+    margin: 5px;
+}
+
+#posts{
+    margin-left:5px;
+}
+
+#follow-btn{
+    background-color:greenyellow;
+    color:white;
+    border: none;
+    border-radius:10px;
+    width: 100px;
+    margin-left: 222px;
+    align-self: center;
+}
